@@ -8,7 +8,7 @@ fi
 
 model=${1:-o3-mini}
 
-valid_models=("o3-mini" "o1" "r1" "ds3" "c3.7" "g2.5-pro" "gemma327")
+valid_models=("o3-mini" "o1" "r1" "ds3" "c3.7" "g2.5-pro" "gemma327" "optimus")
 
 valid=false
 for v in "${valid_models[@]}"; do
@@ -39,6 +39,8 @@ elif [ "$model" == "c3.7" ]; then
     aider --model openrouter/anthropic/claude-3.7-sonnet --architect --editor-model claude-3-5-sonnet-20241022
 elif [ "$model" == "gemma327" ]; then
     aider --model openrouter/google/gemma-3-27b-it --architect --editor-model claude-3-5-sonnet-20241022
+elif [ "$model" == "optimus" ]; then
+    aider --model openrouter/openrouter/optimus-alpha --architect --editor-model claude-3-5-sonnet-20241022
 else
     echo "Invalid model specified."
     echo "Usage: $(basename $0) [model]"
