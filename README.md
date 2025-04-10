@@ -108,6 +108,20 @@ uv run sfa_polars_csv_agent_openai_v2.py -i "data/analytics.csv" -p "What is the
 uv run sfa_polars_csv_agent_openai_v2.py -i "data/analytics.csv" -p "What is the average age of the users?" -c 5
 ```
 
+### Polars CSV Agent (Anthropic v3)
+> (sfa_polars_csv_agent_anthropic_v3.py)
+
+An AI-powered assistant that generates and executes Polars data transformations on CSV files using Anthropic's API.
+
+Example usage:
+```bash
+# Run with default 10 compute loops
+uv run sfa_polars_csv_agent_anthropic_v3.py -i "data/analytics.csv" -p "What is the average age of the users?"
+
+# Run with a custom number of compute loops (e.g., 5)
+uv run sfa_polars_csv_agent_anthropic_v3.py -i "data/analytics.csv" -p "What is the average age of the users?" -c 5
+```
+
 ### Web Scraper Agent (OpenAI)
 > (sfa_scrapper_agent_openai_v2.py)
 
