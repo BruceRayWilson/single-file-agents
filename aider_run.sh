@@ -2,7 +2,7 @@
 
 if [ "$1" == "--help" ]; then
     echo "Usage: $(basename $0) [model]"
-    echo "  model: 'o3-mini' (default), 'o1', 'r1', 'ds3', 'c3.7', 'g2.5-pro', or 'gemma327'"
+    echo "  model: 'o3-mini' (default), 'o1', 'r1', 'ds3', 'c3.7', 'g2.5-pro', 'gemma327', or 'optimus'"
     exit 0
 fi
 

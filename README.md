@@ -1,6 +1,6 @@
 # Single File Agents (SFA)
 > Premise: #1: What if we could pack single purpose, powerful AI Agents into a single python file?
-> 
+>
 > Premise: #2: What's the best structural pattern for building Agents that can improve in capability as compute and intelligence increases?
 
 ![Scale Your AI Coding Impact](images/scale-your-ai-coding-impact-with-devin-cursor-aider.png)
@@ -9,7 +9,7 @@
 
 ## What is this?
 
-A collection of powerful single-file agents built on top of [uv](https://github.com/astral/uv) - the modern Python package installer and resolver. 
+A collection of powerful single-file agents built on top of [uv](https://github.com/astral/uv) - the modern Python package installer and resolver.
 
 These agents aim to do one thing and one thing only. They demonstrate precise prompt engineering and GenAI patterns for practical tasks many of which I share on the [IndyDevDan YouTube channel](https://www.youtube.com/@indydevdan). Watch us walk through the Single File Agent in [this video](https://youtu.be/YAIJV48QlXc).
 
@@ -95,20 +95,23 @@ uv run sfa_bash_editor_agent_anthropic_v2.py --prompt "List all Python files in 
 ```
 
 ### Polars CSV Agent (OpenAI)
+
 > (sfa_polars_csv_agent_openai_v2.py)
 
 An AI-powered assistant that generates and executes Polars data transformations for CSV files using OpenAI's function calling capabilities.
 
 Example usage:
+
 ```bash
 # Run Polars CSV agent with default compute loops (10)
-uv run sfa_polars_csv_agent_openai_v2.py -i "data/analytics.csv" -p "What is the average age of the users?"
+uv run sfa_polars_csv_agent_openai_v2.py -i "data/comment_examples.csv" -p "Give the first five comments please."
 
 # Run with custom compute loops
-uv run sfa_polars_csv_agent_openai_v2.py -i "data/analytics.csv" -p "What is the average age of the users?" -c 5
+uv run sfa_polars_csv_agent_openai_v2.py -i "data/comment_examples.csv" -p "Give the first five comments please." -c 5
 ```
 
 ### Polars CSV Agent (Anthropic v3)
+
 > (sfa_polars_csv_agent_anthropic_v3.py)
 
 An AI-powered assistant that generates and executes Polars data transformations on CSV files using Anthropic's API.
@@ -146,7 +149,7 @@ uv run sfa_scrapper_agent_openai_v2.py \
 - **Minimal, Precise Agents**: Carefully crafted prompts for small agents that can do one thing really well
 - **Modern Python**: Built on uv for fast, reliable dependency management
 - **Run From The Cloud**: With uv, you can run these scripts from your server or right from a gist (see my gists commands)
-- **Patternful**: Building effective agents is about setting up the right prompts, tools, and process for your use case. Once you setup a great pattern, you can re-use it over and over. That's part of the magic of these SFA's. 
+- **Patternful**: Building effective agents is about setting up the right prompts, tools, and process for your use case. Once you setup a great pattern, you can re-use it over and over. That's part of the magic of these SFA's.
 
 ## Test Data
 
@@ -168,7 +171,7 @@ Perfect for testing filtering, sorting, and aggregation operations with realisti
 ## Agents
 > Note: We're using the term 'agent' loosely for some of these SFA's. We have prompts, prompt chains, and a couple are official Agents.
 
-### JQ Command Agent 
+### JQ Command Agent
 > (sfa_jq_gemini_v1.py)
 
 An AI-powered assistant that generates precise jq commands for JSON processing
@@ -182,7 +185,7 @@ uv run sfa_jq_gemini_v1.py --exe "Filter scores above 80 from data/analytics.jso
 uv run sfa_jq_gemini_v1.py "Filter scores above 80 from data/analytics.json and save to high_scores.json"
 ```
 
-### DuckDB Agents 
+### DuckDB Agents
 > (sfa_duckdb_openai_v2.py, sfa_duckdb_anthropic_v2.py, sfa_duckdb_gemini_v2.py, sfa_duckdb_gemini_v1.py)
 
 We have three DuckDB agents that demonstrate different approaches and capabilities across major AI providers:
@@ -195,7 +198,7 @@ Example usage:
 # Run DuckDB agent with default compute loops (10)
 uv run sfa_duckdb_openai_v2.py -d ./data/analytics.db -p "Show me all users with score above 80"
 
-# Run with custom compute loops 
+# Run with custom compute loops
 uv run sfa_duckdb_openai_v2.py -d ./data/analytics.db -p "Show me all users with score above 80" -c 5
 ```
 
@@ -261,7 +264,7 @@ uv run sfa_meta_prompt_openai_v1.py
 - Python 3.8+
 - uv package manager
 - GEMINI_API_KEY (for Gemini-based agents)
-- OPENAI_API_KEY (for OpenAI-based agents) 
+- OPENAI_API_KEY (for OpenAI-based agents)
 - ANTHROPIC_API_KEY (for Anthropic-based agents)
 - jq command-line JSON processor (for JQ agent)
 - DuckDB CLI (for DuckDB agents)
